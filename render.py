@@ -46,12 +46,12 @@ def render_set(model_path, name, iteration, views, gaussians, pipeline, backgrou
         metric_psnr.append(psnr(rendering, gt_image).mean().double().item())
         rendering = rendering.permute(1,2,0)
         gt_image = gt_image.permute(1,2,0)
-        metric_ssim.append(compute_img_metric(rendering, gt_image, 'ssim'))
+       # metric_ssim.append(compute_img_metric(rendering, gt_image, 'ssim'))
         metric_lpips.append(compute_img_metric(rendering, gt_image, 'lpips').item())
     
     print(f"========={name} dataset=========")
     print("PSNR: ", sum(metric_psnr) / len(metric_psnr))
-    print("SSIM: ", sum(metric_ssim) / len(metric_ssim))
+   # print("SSIM: ", sum(metric_ssim) / len(metric_ssim))
     print("LPIPS: ", sum(metric_lpips) / len(metric_lpips))
     print(f"================================")
 
