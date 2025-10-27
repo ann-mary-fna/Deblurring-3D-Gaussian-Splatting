@@ -2,10 +2,15 @@
 Evaluation codes from Deblur-NeRF (https://github.com/limacv/Deblur-NeRF)
 '''
 
+
+
 from skimage import metrics
 import torch
 import torch.hub
-from lpips.lpips import LPIPS
+
+import sys
+sys.path.append("/content/Deblurring-3D-Gaussian-Splatting/lpipsPyTorch/modules")
+from lpips import LPIPS
 import os
 import numpy as np
 
