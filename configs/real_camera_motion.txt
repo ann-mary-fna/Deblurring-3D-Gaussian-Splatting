@@ -3,4 +3,4 @@ densify_prune_threshold = 0.01
 lambda_s = 0.01
 lambda_p = 0.01
 use_pos = 1
-resolution = 4
+resolution = 1
